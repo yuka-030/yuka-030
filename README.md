@@ -11,8 +11,8 @@ Languages and Tools:
   <a href="https://ja.react.dev/"><img src="images/React.png" alt="React" height="40"></a>
   <a href="https://nextjs.org/docs"><img src="images/NEXTjs.png" alt="Next.js" height="40"></a>
   <a href="https://docs.nestjs.com/"><img src="images/Nestjs.png" alt="NestJS" height="40"></a>
-  <a href="https://nodejs.org/ja"><img src="images/Nodejs.png" alt="Node.js" height="40"></a>
-  <a href="https://nodejs.org/ja"><img src="images/Expressjs.svg" alt="Express.js" height="40"></a>
+  <a href="https://nodejs.org/ja"><img src="images/Nodejs.png" alt="Node.js" height="50"></a>
+  <a href="https://nodejs.org/ja"><img src="images/Expressjs.svg" alt="Express.js" width="60"></a>
   <a href="https://www.python.org/"><img src="images/Python2.png" alt="Python" height="40"></a>
   <a href="https://www.php.net/"><img src="images/PHP.png" alt="PHP" width="50"></a>
   <a href="https://laravel.com/"><img src="images/Laravel.png" alt="Laravel" height="30"></a>
