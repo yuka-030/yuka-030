@@ -3,7 +3,7 @@ import re
 import sys
 
 
-def pad_svg(src_path: str, dst_path: str, pad_top: int) -> None:
+def pad_svg(src_path: str, dst_path: str, pad_bottom: int) -> None:
     with open(src_path, encoding="utf-8") as f:
         svg = f.read()
 
@@ -14,7 +14,7 @@ def pad_svg(src_path: str, dst_path: str, pad_top: int) -> None:
 
     view_width = match.group(1)
     view_height = float(match.group(2))
-    new_height = view_height + pad_top
+    new_height = view_height + pad_bottom
 
     svg = svg.replace(
         match.group(0),
@@ -29,29 +29,13 @@ def pad_svg(src_path: str, dst_path: str, pad_top: int) -> None:
         count=1,
     )
 
-    # clipPath の矩形を余白分だけ下げる
-    svg = re.sub(
-        r'(<clipPath[^>]*>\s*<path[^>]*d="M)0 0(h[\d.]+v[\d.]+H0z")',
-        rf"\g<1>0 {pad_top}\g<2>",
-        svg,
-        count=1,
-    )
-
-    # 中身を下方向にずらして上に余白を作る
-    svg = re.sub(
-        r"<g ",
-        f'<g transform="translate(0 {pad_top})" ',
-        svg,
-        count=1,
-    )
-
     with open(dst_path, "w", encoding="utf-8") as f:
         f.write(svg)
 
 
 def main() -> None:
     if len(sys.argv) < 4:
-        print("usage: python scripts/pad_svg.py <src> <dst> <pad_top>")
+        print("usage: python scripts/pad_svg.py <src> <dst> <pad_bottom>")
         sys.exit(1)
 
     pad_svg(sys.argv[1], sys.argv[2], int(sys.argv[3]))
