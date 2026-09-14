@@ -29,6 +29,14 @@ def pad_svg(src_path: str, dst_path: str, pad_top: int) -> None:
         count=1,
     )
 
+    # clipPath の矩形を余白分だけ下げる
+    svg = re.sub(
+        r'(<clipPath[^>]*>\s*<path[^>]*d="M)0 0(h[\d.]+v[\d.]+H0z")',
+        rf"\g<1>0 {pad_top}\g<2>",
+        svg,
+        count=1,
+    )
+
     # 中身を下方向にずらして上に余白を作る
     svg = re.sub(
         r"<g ",
