@@ -16,7 +16,7 @@ Languages and Tools:
   <a href="https://www.python.org/"><img src="images/Python2.png" alt="Python" width="40"></a>
   <a href="https://www.php.net/"><img src="images/PHP.png" alt="PHP" width="46"></a>
   <a href="https://laravel.com/"><img src="images/Laravel.png" alt="Laravel" width="30"></a>
-  <a href="https://ja.wordpress.org/"><img src="images/WordPress.png" alt="WordPress" width="36"></a>
+  <a href="https://ja.wordpress.org/"><img src="images/WordPress.png" alt="WordPress" width="58"></a>
   <a href="https://www.java.com/ja/"><img src="images/Java.png" alt="Java" width="40"></a>
   <a href="https://tomcat.apache.org/tomcat-9.0-doc/index.html"><img src="images/Tomcat.png" alt="Tomcat" width="36"></a>
   <a href="https://code.visualstudio.com/docs"><img src="images/VScode.png" alt="VScode" width="32"></a>
